@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="remix-name-generator.css"></link>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+
+<div id="remix-name-gen">
+	<div>
+		<input placeholder="Remixer name" v-model="remixerName">
+	</div>
+	<div>
+		<button v-on:click="generateResult">Generate</button>
+	</div>
+
+	<span class="result">
+		<span class="clickable" v-on:click="generateSongName">{{songName}}</span>
+		<span v-if="remixerName">({{remixerName}}'s</span>
+		<span v-if="!remixerName">(</span><span class="clickable" v-on:click="randomizeAdjective">{{remixAdjective}}</span>
+		<span class="clickable" v-on:click="randomizeNoun">{{remixNoun}}</span>
+		<span class="clickable" v-on:click="toggleRe">{{remix}}</span>)
+	</span>
+</div>
+
+<script src="wordlist.js"></script>
+<script src="remix-name-generator.js"></script>
