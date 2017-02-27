@@ -6,3 +6,8 @@
 .clickable:hover {
 	background-color: #eee;
 }
+
+blockquote {
+	border: 1px solid #eee;
+	padding: 1em;
+}
